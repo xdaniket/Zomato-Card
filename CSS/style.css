@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Okra, Helvetica, sans-serif;
+}
+
+.Card_Container {
+  position: relative;
+  top: 20px;
+  display: flex;
+  padding: 23px;
+  border-radius: 22px;
+  width: 389px;
+  background-color: white;
+
+  flex-direction: column;
+  cursor: pointer;
+}
+.Card_Container:hover {
+  border: 1px solid #e2dada;
+  background-color: whitesmoke;
+}
+#Products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.Food_Image {
+  position: relative;
+}
+.Img {
+  height: 240px;
+}
+.Food_Img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.Para {
+  position: absolute;
+  bottom: 17px;
+  background: rgb(37, 111, 239);
+  color: rgb(255, 255, 255);
+  border-radius: 0px 0.2rem 0.2rem 0px;
+  padding: 2px 4px 2px 8px;
+  font-size: 15px;
+  left: 0;
+}
+.Para2 {
+  background: rgba(255, 255, 255, 0.8);
+  color: rgb(54, 54, 54);
+  right: 12px;
+  border-radius: 5px;
+  width: 47px;
+  left: 319px;
+}
+.Name_Rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 9px 0;
+}
+.Brand {
+  font-size: 23px;
+}
+.Butn {
+  background-color: rgb(58, 183, 87);
+  color: rgb(255, 255, 255);
+  border-radius: 9px;
+  width: 43px;
+  height: 21px;
+  padding-top: 4px;
+  padding-left: 10px;
+}
+.Quality_Rs {
+  color: rgb(105, 105, 105);
+  display: flex;
+  justify-content: space-between;
+}
+.Timing {
+  color: rgb(255, 126, 139);
+  margin: 6px 0 12px 0;
+}
+.Horizontal {
+  height: 0.1rem;
+  background-color: rgb(197 187 187);
+  margin-bottom: 13px;
+  height: 2px;
+}
+.Delivery_Text {
+  color: rgb(130, 130, 130);
+  display: flex;
+  justify-content: space-between;
+  line-height: 18px;
+  font-size: 13px;
+  align-items: center;
+}
+.Text {
+  margin-right: 30px;
+}
+.Anchor_ {
+  text-decoration: none;
+}
