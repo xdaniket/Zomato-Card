@@ -1,5 +1,3 @@
-const Product_Container = document.getElementById("Products");
-
 const arrCard = [
   {
     img: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/x9roxh8iovqhylczjqp7",
@@ -65,6 +63,7 @@ const arrCard = [
     rupees: "₹300 for two",
   },
 ];
+const Product_Container = document.getElementById("Products");
 
 for (let i = 0; i < arrCard.length; i++) {
   // Create main card
@@ -112,8 +111,6 @@ for (let i = 0; i < arrCard.length; i++) {
   Paragrph.id = "text";
   Paragrph.textContent = arrCard[i].name;
 
-  Paragrph.addEventListener("click", change);
-
   const div1 = document.createElement("div");
   div1.className = "Butn";
   div1.textContent = arrCard[i].rating;
@@ -152,7 +149,6 @@ for (let i = 0; i < arrCard.length; i++) {
 
   const deleivery = document.createElement("div");
   deleivery.className = "Delivery_Text";
-  // deleivery.addEventListener("click", action);
   anchorTag2.appendChild(deleivery);
 
   const cardimg = document.createElement("img");
@@ -175,15 +171,58 @@ for (let i = 0; i < arrCard.length; i++) {
   cardContainer.appendChild(anchorTag2);
 
   Product_Container.appendChild(cardContainer);
-
+  document.getElementsByTagName("p")[i].addEventListener("click", change);
   function change() {
-    document.getElementById("text").innerText = "New Burger";
+    console.log("hi");
+    const name = prompt("plz enter new name", "");
+    // document.getElementById("text").innerText = "New Burger";
+    // document.getElementsByTagName("p")[i].innerText = "New Burger";
+    document.getElementsByTagName("p")[i].innerText = name;
   }
 }
 
-// function action() {
-//   const deleivery = document.getElementsByClassName("Delivery_Text");
-//   const anchorTg = document.createElement("a");
-//   anchorTg.href = "https://www.zomato.com/indore/punjabi-chulha-press-complexu";
-//   anchorTg.target = "blank";
-// }
+const cardContainer = document.getElementById("card_Container");
+
+const parentCard = document.createElement("div");
+parentCard.className = "card";
+
+const title = document.createElement("h4");
+title.textContent = "Zomato-Card";
+
+const valueInputBox = document.createElement("input");
+valueInputBox.type = "button";
+valueInputBox.size = "1";
+valueInputBox.max = "10";
+valueInputBox.id = "number";
+valueInputBox.value = "1";
+
+const incrementBox = document.createElement("input");
+incrementBox.className = "input";
+incrementBox.type = "button";
+incrementBox.value = "Increment";
+incrementBox.addEventListener("click", function incrementValue() {
+  var values = document.getElementById("number").value;
+  if (values < 10) {
+    values++;
+    document.getElementById("number").value = values;
+  }
+});
+
+const decrementBox = document.createElement("input");
+decrementBox.className = "input";
+decrementBox.type = "button";
+decrementBox.value = "Decrement";
+decrementBox.addEventListener("click", function decrementValue() {
+  var values = document.getElementById("number").value;
+  if (values > 1) {
+    values--;
+    document.getElementById("number").value = values;
+  }
+});
+
+parentCard.appendChild(decrementBox);
+parentCard.appendChild(valueInputBox);
+parentCard.appendChild(incrementBox);
+parentCard.appendChild(title);
+
+cardContainer.appendChild(parentCard);

@@ -104,3 +104,23 @@
 .Anchor_ {
   text-decoration: none;
 }
+
+/* Another Function CSS */
+.card {
+  text-align: center;
+  margin-top: 20px;
+}
+.input {
+  width: 100px;
+  padding: 8px;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 6px;
+  border: none;
+  margin: 12px;
+  font-weight: 600;
+}
+#number {
+  padding: 4px;
+  width: 35px;
+}
